@@ -9,8 +9,8 @@ const dummyData = [
 const ItemList = () => {
     return (
         <div>
-            {dummyData.map((item) => {
-                return <Item title={item.title} time={item.time} />;
+            {dummyData.map((item, index) => {
+                return <Item key={index} title={item.title} time={item.time} />;
             })}
         </div>
     );

@@ -1,12 +1,15 @@
 import React from "react";
-import Date from "./NewItemDate";
+import NewItemDate from "./NewItemDate";
+import styles from "./NewItem.module.css";
 
 const NewItem = () => {
     return (
-        <div>
-            <div>
-                <Date />
+        <div className={styles.container}>
+            <div className={styles["details-container"]}>
+                <NewItemDate />
+                <p>12 Tasks</p>
             </div>
+            <button className={styles["button"]}>+</button>
         </div>
     );
 };

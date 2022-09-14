@@ -1,0 +1,27 @@
+.container {
+    background-color: #fdfdff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 30px 35px;
+}
+
+.details-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .button {
+    background-color: #fa7474;
+    border-radius: 100%;
+    border-style: none;
+    color: white;
+    height: 60px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    outline: none;
+    position: absolute;
+    right: 32%;
+    width: 60px;
+}
