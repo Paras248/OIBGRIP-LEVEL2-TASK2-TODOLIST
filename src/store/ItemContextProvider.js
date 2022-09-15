@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const itemContext = React.createContext();
+export const itemContext = React.createContext();
 
 const ItemContextProvider = ({ children }) => {
     const [showModal, setShowModal] = useState(false);

@@ -1,22 +1,42 @@
 .container {
     display: flex;
-
+    flex-direction: column;
     padding: 20px;
     width: 30%;
     background-color: white;
     border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+    top: 35%;
+    left: 35%;
 }
 
 .input {
     padding: 7px;
-    flex: 1;
-    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    border-bottom: 1px double gray;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    font-size: 18px;
+}
+
+.buttonContainer {
+    align-self: flex-end;
 }
 
 .button {
     padding: 10px 20px;
-    margin-left: 10px;
+    margin-left: 5px;
     border-radius: 5px;
     outline: none;
     border-style: none;
+    background-color: #fa7474;
+    color: white;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #fa5454;
 }
