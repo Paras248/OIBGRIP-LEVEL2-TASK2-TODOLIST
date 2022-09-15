@@ -2,7 +2,7 @@
     background-color: #fdfdff;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding: 30px 35px;
+    padding: 20px 35px;
 }
 
 .details-container {
@@ -11,17 +11,20 @@
     justify-content: space-between;
 }
 
-.container .button {
+.button {
     background-color: #fa7474;
     border-radius: 100%;
     border-style: none;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     height: 60px;
     font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 25px;
     outline: none;
-    position: absolute;
-    right: 32%;
     width: 60px;
+    transition: 20ms linear;
+}
+
+.button:hover {
+    background-color: #fa5454;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Item from "./Item";
+import styles from "./ItemList.module.css";
 
 const dummyData = [
     { title: "wash car", time: "12:00 AM" },
@@ -8,11 +9,15 @@ const dummyData = [
 
 const ItemList = () => {
     return (
-        <div>
+        <ul className={styles.ul}>
             {dummyData.map((item, index) => {
-                return <Item key={index} title={item.title} time={item.time} />;
+                return (
+                    <li>
+                        <Item key={index} title={item.title} time={item.time} />
+                    </li>
+                );
             })}
-        </div>
+        </ul>
     );
 };
 

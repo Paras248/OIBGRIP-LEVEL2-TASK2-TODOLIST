@@ -7,9 +7,8 @@ const NewItem = () => {
         <div className={styles.container}>
             <div className={styles["details-container"]}>
                 <NewItemDate />
-                <p>12 Tasks</p>
+                <button className={styles["button"]}>+</button>
             </div>
-            <button className={styles["button"]}>+</button>
         </div>
     );
 };

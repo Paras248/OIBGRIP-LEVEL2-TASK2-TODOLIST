@@ -1,0 +1,27 @@
+.date-container {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.date {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    margin-right: 10px;
+}
+
+.month {
+    color: rgb(114, 113, 113);
+    font-weight: bold;
+}
+
+.year {
+    color: rgb(168, 167, 167);
+    font-weight: bold;
+}
+
+.month-and-year {
+    justify-content: space-around;
+    line-height: 10px;
+}
