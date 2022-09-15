@@ -7,7 +7,8 @@ const BackDrop = () => {
     return ReactDom.createPortal(
         <div className={styles.backdrop}>
             <Modal />
-        </div>
+        </div>,
+        document.getElementById("overlays")
     );
 };
 

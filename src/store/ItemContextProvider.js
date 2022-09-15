@@ -11,3 +11,5 @@ const ItemContextProvider = ({ children }) => {
         </itemContext.Provider>
     );
 };
+
+export default ItemContextProvider;
