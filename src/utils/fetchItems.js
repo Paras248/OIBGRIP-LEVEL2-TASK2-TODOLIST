@@ -1,11 +1,4 @@
-import React, { useEffect, useState } from "react";
-
-export const itemContext = React.createContext();
-
-const ItemContextProvider = ({ children }) => {
-    const [showModal, setShowModal] = useState(false);
-    const [items, setItems] = useState([]);
-
+const fetchItems = (setItem) => {
     useEffect(() => {
         const date = new Date();
         const today = date.getDate();
@@ -29,11 +22,6 @@ const ItemContextProvider = ({ children }) => {
             setItems(localStorageItems);
         }
     }, []);
-    return (
-        <itemContext.Provider value={{ showModal, setShowModal, items, setItems }}>
-            {children}
-        </itemContext.Provider>
-    );
 };
 
-export default ItemContextProvider;
+export default fetchItems;

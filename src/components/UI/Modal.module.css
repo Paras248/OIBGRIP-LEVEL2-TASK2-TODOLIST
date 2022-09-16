@@ -15,11 +15,15 @@
     padding: 7px;
     margin-bottom: 20px;
     outline: none;
-    border-bottom: 1px double gray;
+    border-bottom: 1px solid gray;
     border-left-style: none;
     border-right-style: none;
     border-top-style: none;
     font-size: 18px;
+}
+
+.input.error {
+    border-bottom: 1px solid red;
 }
 
 .buttonContainer {

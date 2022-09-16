@@ -7,7 +7,7 @@ const Item = ({ title, time }) => {
         <div className={styles.container}>
             <input type="checkbox" style={{ marginRight: 20 }} />
             <p className={styles.title}>{title}</p>
-            <p>{time}</p>
+            <p>time</p>
         </div>
     );
 };

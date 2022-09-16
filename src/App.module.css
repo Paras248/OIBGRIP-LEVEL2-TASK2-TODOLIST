@@ -9,3 +9,17 @@
     width: 50%;
     margin-bottom: 100px;
 }
+
+.textContainer {
+    display: flex;
+    background-color: white;
+    padding: 30px 30px;
+    border-bottom: 1px solid rgb(228, 227, 227);
+    justify-content: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+    flex: 1;
+}

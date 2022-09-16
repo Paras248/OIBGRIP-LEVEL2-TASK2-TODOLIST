@@ -7,10 +7,10 @@ const ItemList = () => {
     const { items } = useContext(itemContext);
     return (
         <ul className={styles.ul}>
-            {items.map((item, index) => {
+            {items.map((itemTitle, index) => {
                 return (
-                    <li>
-                        <Item key={index} title={item.title} time={item.time} />
+                    <li key={index}>
+                        <Item title={itemTitle} />
                     </li>
                 );
             })}

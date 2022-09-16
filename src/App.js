@@ -6,14 +6,23 @@ import BackDrop from "./components/UI/BackDrop";
 import { itemContext } from "./store/ItemContextProvider";
 
 function App() {
-    const { showModal } = useContext(itemContext);
+    const { showModal, items } = useContext(itemContext);
+    let Element = <ItemList />;
+
+    if (items.length === 0) {
+        Element = (
+            <li className={`${styles.textContainer} ${styles.title}`}>
+                No items found!!!
+            </li>
+        );
+    }
     return (
         <>
             {showModal && <BackDrop />}
             <div className={styles.container}>
                 <div className={styles["sub-container"]}>
                     <NewItem />
-                    <ItemList />
+                    {Element}
                 </div>
             </div>
         </>
