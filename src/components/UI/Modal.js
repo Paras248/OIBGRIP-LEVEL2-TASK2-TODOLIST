@@ -9,7 +9,8 @@ const Modal = () => {
 
     useEffect(() => {
         console.log(items);
-    }, [items]);
+        localStorage.setItem("items", JSON.stringify(items));
+    }, [setItems, items]);
 
     const onClickHandler = () => {
         if (text.trim().length !== 0) {

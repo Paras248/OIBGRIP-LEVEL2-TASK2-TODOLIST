@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Item from "./Item";
 import styles from "./ItemList.module.css";
 import { itemContext } from "../../store/ItemContextProvider";
 
 const ItemList = () => {
     const { items } = useContext(itemContext);
+    useEffect(() => {
+        console.log(items);
+        localStorage.setItem("items", JSON.stringify(items));
+    }, [items]);
     return (
         <ul className={styles.ul}>
             {items.map((itemTitle, index) => {
