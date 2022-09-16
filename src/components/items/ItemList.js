@@ -13,7 +13,7 @@ const ItemList = () => {
             {items.map((itemTitle, index) => {
                 return (
                     <li key={index}>
-                        <Item title={itemTitle} />
+                        <Item title={itemTitle} index={index} />
                     </li>
                 );
             })}

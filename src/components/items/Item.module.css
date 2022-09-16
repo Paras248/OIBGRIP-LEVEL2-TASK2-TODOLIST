@@ -2,9 +2,15 @@
     display: flex;
     background-color: white;
     padding: 20px 30px;
+    align-items: center;
     border-bottom: 1px solid rgb(228, 227, 227);
 }
 
 .title {
     flex: 1;
+    font-weight: bold;
+}
+
+.icon {
+    color: rgb(107, 106, 106);
 }
