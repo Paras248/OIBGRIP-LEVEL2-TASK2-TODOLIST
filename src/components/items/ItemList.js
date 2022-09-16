@@ -6,7 +6,6 @@ import { itemContext } from "../../store/ItemContextProvider";
 const ItemList = () => {
     const { items } = useContext(itemContext);
     useEffect(() => {
-        console.log(items);
         localStorage.setItem("items", JSON.stringify(items));
     }, [items]);
     return (
