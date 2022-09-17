@@ -4,13 +4,14 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 import { itemContext } from "../../store/ItemContextProvider";
 
-const Item = ({ title, time, index }) => {
+const Item = ({ title, time, itemIndex }) => {
     const [icon, setIcon] = useState(false);
     const { setItems, items } = useContext(itemContext);
 
     const onDeleteHandler = () => {
-        let tempArr = items.filter(() => !index);
-        console.log(tempArr);
+        let tempArr = items.filter((item, index) => index !== itemIndex);
+        setItems(tempArr);
+        localStorage.setItem("items", JSON.stringify(tempArr));
     };
 
     return (
