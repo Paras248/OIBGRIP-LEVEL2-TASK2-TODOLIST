@@ -6,6 +6,8 @@ import { itemContext } from "../../store/ItemContextProvider";
 
 const Item = ({ title, time, itemIndex }) => {
     const [icon, setIcon] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
+
     const { setItems, items } = useContext(itemContext);
 
     const onDeleteHandler = () => {
@@ -14,10 +16,21 @@ const Item = ({ title, time, itemIndex }) => {
         localStorage.setItem("items", JSON.stringify(tempArr));
     };
 
+    const onCheckedHandler = () => {
+        setIsChecked(!isChecked);
+    };
+
+    let titleStyle = !isChecked ? `${styles.title}` : `${styles.checkedTitle}`;
+
     return (
         <div className={styles.container}>
-            <input type="checkbox" style={{ marginRight: 20 }} />
-            <p className={styles.title}>{title}</p>
+            <input
+                className={styles.checkbox}
+                type="checkbox"
+                style={{ marginRight: 20 }}
+                onChange={onCheckedHandler}
+            />
+            <p className={titleStyle}>{title}</p>
             <div onMouseEnter={() => setIcon(true)} onMouseLeave={() => setIcon(false)}>
                 {!icon && (
                     <DeleteOutlineIcon

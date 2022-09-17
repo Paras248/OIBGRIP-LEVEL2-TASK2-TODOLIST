@@ -1,16 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./Modal.module.css";
 import { itemContext } from "../../store/ItemContextProvider";
 
 const Modal = () => {
-    const { setShowModal, setItems, items } = useContext(itemContext);
+    const { setShowModal, setItems } = useContext(itemContext);
     const [text, setText] = useState("");
     const [showError, setShowError] = useState(false);
-
-    useEffect(() => {
-        console.log(items);
-        localStorage.setItem("items", JSON.stringify(items));
-    }, [setItems, items]);
 
     const onClickHandler = () => {
         if (text.trim().length !== 0) {
