@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import styles from "./Item.module.css";
-import DeleteIcon from "@material-ui/icons/Delete";
-import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 import { itemContext } from "../../store/ItemContextProvider";
+import DeleteIcon from "@mui/icons-material/Delete";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 const Item = ({ title, time, itemIndex }) => {
     const [icon, setIcon] = useState(false);
