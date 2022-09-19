@@ -25,3 +25,21 @@
     justify-content: space-around;
     line-height: 10px;
 }
+
+@media screen and (max-width: 548px) {
+    .date {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 437px) {
+    .date {
+        font-size: 20px;
+    }
+    .month {
+        font-size: 13px;
+    }
+    .year {
+        font-size: 13px;
+    }
+}

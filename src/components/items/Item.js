@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./Item.module.css";
 import { itemContext } from "../../store/ItemContextProvider";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -7,7 +7,6 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 const Item = ({ title, time, itemIndex }) => {
     const [icon, setIcon] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
-
     const { setItems, items } = useContext(itemContext);
 
     const onDeleteHandler = () => {
@@ -21,6 +20,8 @@ const Item = ({ title, time, itemIndex }) => {
     };
 
     let titleStyle = !isChecked ? `${styles.title}` : `${styles.checkedTitle}`;
+
+    useEffect(() => {}, [isChecked]);
 
     return (
         <div className={styles.container}>
