@@ -44,3 +44,11 @@
 .button:hover {
     background-color: #fa5454;
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 50%;
+        top: 15%;
+        left: 20%;
+    }
+}
