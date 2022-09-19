@@ -32,7 +32,7 @@
     }
 }
 
-@media screen and (max-width: 437px) {
+@media screen and (max-width: 460px) {
     .date {
         font-size: 20px;
     }
